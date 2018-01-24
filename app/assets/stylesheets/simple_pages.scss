@@ -77,3 +77,13 @@ html, body {
 .site-footer {
   background: orange;
 }
+
+.carousel-inner > .item > img {
+  width: 640px;
+  height: 360px;
+}
+
+.carousel-caption {
+  font-size: 10em;
+  color: #6b717f;
+}
