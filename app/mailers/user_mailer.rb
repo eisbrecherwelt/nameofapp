@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
 
   def contact_form(email, name, message)
   @message = message
-    mail(from: email,
+    mail(from: 'app84945195@heroku.com',
          to: 'eisbrecherwelt@gmail.com',
          subject: "A new contact form message from #{name}")
   end
