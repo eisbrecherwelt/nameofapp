@@ -61,3 +61,6 @@ end
 
 # For Devise
 gem 'devise'
+
+# For CanCanCan
+gem 'cancancan', '~> 1.10'
