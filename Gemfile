@@ -54,6 +54,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # For jQuery
 gem 'jquery-rails'
+
 # For PostgresSQL
 group :production do
   gem 'pg'
@@ -64,3 +65,5 @@ gem 'devise'
 
 # For CanCanCan
 gem 'cancancan', '~> 1.10'
+
+gem 'pg'
