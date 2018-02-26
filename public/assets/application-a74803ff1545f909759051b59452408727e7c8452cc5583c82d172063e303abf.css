@@ -1,0 +1,214 @@
+/* line 5, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/products.scss */
+.img-responsive {
+  width: 300px;
+  height: 300px;
+}
+/* line 1, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 8, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+/* line 13, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+#nav {
+  overflow: hidden;
+  z-index: 1;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  float: left;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 24, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+#nav ul {
+  list-style: none;
+  width: 800px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 31, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+#nav li {
+  float: left;
+  list-style-type: none;
+}
+
+/* line 36, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+#nav li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #069;
+  border-right: 1px solid #ccc;
+}
+
+/* line 45, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+#nav li:first-child a {
+  border-left: 1px solid #ccc;
+}
+
+/* line 49, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+#nav li a:hover {
+  color: #c00;
+  background-color: #fff;
+}
+
+/* line 54, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+* {
+  margin: 0;
+}
+
+/* line 58, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+html, body {
+  height: 100%;
+  padding-top: 20px;
+}
+
+/* line 63, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px;
+}
+
+/* line 69, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+/* line 74, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.site-footer, .page-wrap:after {
+  height: 20px;
+}
+
+/* line 78, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.site-footer {
+  background: orange;
+}
+
+/* line 82, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.carousel-inner > .item > img {
+  width: 640px;
+  height: 360px;
+}
+
+/* line 87, /mnt/c/Users/Lars/AppData/Local/atom/app-1.23.1/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.carousel-caption {
+  font-size: 10em;
+  color: #6b717f;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
