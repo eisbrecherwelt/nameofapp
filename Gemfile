@@ -65,3 +65,6 @@ gem 'devise'
 
 # For CanCanCan
 gem 'cancancan', '~> 1.10'
+
+# Had to list pg again because Heroku isn't detecting postgreSQL gem correctly
+gem 'pg'
