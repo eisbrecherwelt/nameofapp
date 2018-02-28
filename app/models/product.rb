@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  validates :name, presence: true
+
   has_many :comments
 
   def self.search(search_term)
@@ -15,6 +17,14 @@ class Product < ApplicationRecord
 
   def average_rating
     comments.average(:rating).to_f
+  end
+
+  def show
+    ## perform a paginated query:
+    @posts = Post.paginate(:page => params[:page])
+
+    # or, use an explicit "per page" limit:
+    Post.paginate(:page => params[:page], :per_page => 3)
   end
 
 end
