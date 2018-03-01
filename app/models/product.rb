@@ -20,11 +20,7 @@ class Product < ApplicationRecord
   end
 
   def show
-    ## perform a paginated query:
-    @posts = Post.paginate(:page => params[:page])
 
-    # or, use an explicit "per page" limit:
-    Post.paginate(:page => params[:page], :per_page => 3)
   end
 
 end
