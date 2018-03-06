@@ -67,7 +67,12 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 
 # Had to list pg again because Heroku isn't detecting postgreSQL gem correctly
-gem 'pg'
+#gem 'pg'
 
 ## Gemfile for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '~> 3.1.0'
+
+# For RSPEC-Rails
+group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
+end
