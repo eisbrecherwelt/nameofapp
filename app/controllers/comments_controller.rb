@@ -1,8 +1,4 @@
 class CommentsController < ApplicationController
-  validates :body, presence: true
-  validates :user, presence: true
-  validates :product, presence: true
-  validates :rating, numericality: { only_integer: true }
 
   def create
     @product = Product.find(params[:product_id])
