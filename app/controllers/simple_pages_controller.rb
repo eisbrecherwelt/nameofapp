@@ -1,7 +1,7 @@
 class SimplePagesController < ApplicationController
   def index
-  @products = Product.limit(3)
-  render layout: "products"
+    @products = Product.limit(3)
+    render "landing_page"
   end
   def landing_page
     @products = Product.limit(3)

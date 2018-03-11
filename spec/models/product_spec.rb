@@ -1,19 +1,22 @@
 require 'rails_helper'
 
 describe Product do
-  
+
   context "when the product has comments" do
-    let(:product) { Product.create!(name: "munchie") }
+    
   end
 
   context "create a user" do
-    let(:user) { User.create!(first_name: "John", last_name: "Wick", email: "johnwick041298@gmail.com", encrypted_password: "youkilledmydog")}
+    #let(:user) { User.create!(first_name: "John", last_name: "Wick", email: "johnwick041298@gmail.com", encrypted_password: "youkilledmydog")}
   end
 
   before do
-    @product.comments.create!(rating: 1, user: user, body: "Awful munchie!")
-    @product.comments.create!(rating: 3, user: user, body: "Ok munchie!")
-    @product.comments.create!(rating: 5, user: user, body: "Great munchie!")
+    #let(:product) { Product.create!(name: "munchie") }
+    @product = Product.create(name: "munchie")
+    @user = User.create!(first_name: "John", last_name: "Wick", email: "johnwick041298@gmail.com", password: "youkilledmydog", password_confirmation: "youkilledmydog")
+    @product.comments.create!(rating: 1, user_id: @user.id, body: "Awful munchie!")
+    @product.comments.create!(rating: 3, user_id: @user.id, body: "Ok munchie!")
+    @product.comments.create!(rating: 5, user_id: @user.id, body: "Great munchie!")
   end
 
   it "returns the average rating of all comments" do
