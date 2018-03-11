@@ -21390,3 +21390,77 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 111ms (Views: 104.5ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:18:35 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered simple_pages/landing_page.html.erb within layouts/application (31.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 623ms (Views: 604.6ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-03-11 17:18:37 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UPxuLDsaPRfVHb9U9SWEfsctwYWSCvEqa34jRkFQMpw3bXN6PPqjNPHjnDocyYV4RnjTMNDPM+PKp05B42cSvA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 33ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:18:37 -0500
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered simple_pages/landing_page.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 88ms (Views: 83.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-03-11 17:18:40 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 155ms (Views: 151.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-03-11 17:18:46 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hacEY87f+4bAvxZT8CDEGmHrNlV3aC0mcSUVonwvuU9Gkb5t5pfmaCi+iMTAHszKRF2p2dzYaxf2kTZay+eSRA==", "user"=>{"email"=>"eisbrecherwelt@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "eisbrecherwelt@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-03-11 22:18:47.110612"], ["last_sign_in_at", "2018-03-11 18:15:02.449538"], ["sign_in_count", 17], ["updated_at", "2018-03-11 22:18:47.112708"], ["id", 1]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 338ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:18:47 -0500
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered simple_pages/landing_page.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 99.0ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-03-11 17:18:49 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jhksyrWgygWdQIm6wuqbAwlz6qljrVf3k16oQs7+oEXriz7ILr3SBx7bPX2/9JC0wG5YhrjnvdMntQo4iSzE7A=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:18:49 -0500
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered simple_pages/landing_page.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.3ms)
+
+
