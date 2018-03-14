@@ -75,6 +75,10 @@ gem 'will_paginate', '~> 3.1.0'
 # For RSPEC-Rails
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
+
+  # For FactoryBot
+  gem "factory_bot_rails", "~> 4.0"
 end
 
+# For rails_helper
 gem 'rails-controller-testing'
