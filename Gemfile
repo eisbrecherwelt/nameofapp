@@ -82,3 +82,6 @@ end
 
 # For rails_helper
 gem 'rails-controller-testing'
+
+# For Stripe
+gem 'stripe'

@@ -21464,3 +21464,351 @@ Processing by SimplePagesController#landing_page as HTML
 Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-15 20:28:08 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered simple_pages/landing_page.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 1398ms (Views: 1361.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-15 20:28:11 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (2.8ms)
+  Rendered products/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 108ms (Views: 96.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:28:13 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (25.8ms)
+Completed 401 Unauthorized in 246ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_stripe_checkout_button with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/eisbr/AppData/Local/heroku/munichmunchies/nameofapp/app/views"
+  * "/home/Lars/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.1/app/views"
+):
+    28: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    29: 
+    30: <%= form_with(url: '/payments/create') do |form| %>
+    31:   <%= render partial: "shared/stripe_checkout_button" %>
+    32: <% end %>
+    33: 
+    34: <% if @product.comments.exists? %>
+  
+app/views/products/show.html.erb:31:in `block in _app_views_products_show_html_erb__4201906992024369972_70254760597080'
+app/views/products/show.html.erb:30:in `_app_views_products_show_html_erb__4201906992024369972_70254760597080'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:30:22 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (14.5ms)
+Completed 401 Unauthorized in 34ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/__stripe_checkout_button with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/eisbr/AppData/Local/heroku/munichmunchies/nameofapp/app/views"
+  * "/home/Lars/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.1/app/views"
+):
+    28: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    29: 
+    30: <%= form_with(url: '/payments/create') do |form| %>
+    31:   <%= render partial: "shared/_stripe_checkout_button" %>
+    32: <% end %>
+    33: 
+    34: <% if @product.comments.exists? %>
+  
+app/views/products/show.html.erb:31:in `block in _app_views_products_show_html_erb__4201906992024369972_70254625851280'
+app/views/products/show.html.erb:30:in `_app_views_products_show_html_erb__4201906992024369972_70254625851280'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:31:01 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (13.5ms)
+Completed 401 Unauthorized in 33ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_stripe_checkout_button with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/eisbr/AppData/Local/heroku/munichmunchies/nameofapp/app/views"
+  * "/home/Lars/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.1/app/views"
+):
+    28: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    29: 
+    30: <%= form_with(url: '/payments/create') do |form| %>
+    31:   <%= render partial: "shared/stripe_checkout_button" %>
+    32: <% end %>
+    33: 
+    34: <% if @product.comments.exists? %>
+  
+app/views/products/show.html.erb:31:in `block in _app_views_products_show_html_erb__4201906992024369972_70254762868180'
+app/views/products/show.html.erb:30:in `_app_views_products_show_html_erb__4201906992024369972_70254762868180'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:33:48 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (13.7ms)
+Completed 401 Unauthorized in 33ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_stripe_checkout_button with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/eisbr/AppData/Local/heroku/munichmunchies/nameofapp/app/views"
+  * "/home/Lars/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.1/app/views"
+):
+    28: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    29: 
+    30: <%= form_with(url: '/payments/create') do |form| %>
+    31:   <%= render "shared/stripe_checkout_button" %>
+    32: <% end %>
+    33: 
+    34: <% if @product.comments.exists? %>
+  
+app/views/products/show.html.erb:31:in `block in _app_views_products_show_html_erb__4201906992024369972_70254796678080'
+app/views/products/show.html.erb:30:in `_app_views_products_show_html_erb__4201906992024369972_70254796678080'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:34:16 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (13.1ms)
+Completed 401 Unauthorized in 32ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial /_stripe_checkout_button with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/eisbr/AppData/Local/heroku/munichmunchies/nameofapp/app/views"
+  * "/home/Lars/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.1/app/views"
+):
+    28: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    29: 
+    30: <%= form_with(url: '/payments/create') do |form| %>
+    31:   <%= render partial: "/stripe_checkout_button" %>
+    32: <% end %>
+    33: 
+    34: <% if @product.comments.exists? %>
+  
+app/views/products/show.html.erb:31:in `block in _app_views_products_show_html_erb__4201906992024369972_70254762126620'
+app/views/products/show.html.erb:30:in `_app_views_products_show_html_erb__4201906992024369972_70254762126620'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:35:25 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (13.0ms)
+Completed 401 Unauthorized in 32ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial app/views/devise/shared/_stripe_checkout_button with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/eisbr/AppData/Local/heroku/munichmunchies/nameofapp/app/views"
+  * "/home/Lars/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.1/app/views"
+):
+    28: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    29: 
+    30: <%= form_with(url: '/payments/create') do |form| %>
+    31:   <%= render partial: "app/views/devise/shared/stripe_checkout_button" %>
+    32: <% end %>
+    33: 
+    34: <% if @product.comments.exists? %>
+  
+app/views/products/show.html.erb:31:in `block in _app_views_products_show_html_erb__4201906992024369972_70368431518800'
+app/views/products/show.html.erb:30:in `_app_views_products_show_html_erb__4201906992024369972_70368431518800'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:37:27 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (13.1ms)
+Completed 401 Unauthorized in 32ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_stripe_checkout_button.html.erb with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/eisbr/AppData/Local/heroku/munichmunchies/nameofapp/app/views"
+  * "/home/Lars/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.1/app/views"
+):
+    28: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    29: 
+    30: <%= form_with(url: '/payments/create') do |form| %>
+    31:   <%= render partial: "shared/stripe_checkout_button.html.erb" %>
+    32: <% end %>
+    33: 
+    34: <% if @product.comments.exists? %>
+  
+app/views/products/show.html.erb:31:in `block in _app_views_products_show_html_erb__4201906992024369972_70254761119240'
+app/views/products/show.html.erb:30:in `_app_views_products_show_html_erb__4201906992024369972_70254761119240'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:38:22 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered devise/shared/_stripe_checkout_button.html.erb (0.3ms)
+  [1m[36mComment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."product_id" = ? LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY "comments"."rating" DESC LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY "comments"."rating" DESC LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (0.8ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 1], ["LIMIT", 2], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_comments.html.erb (86.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (192.5ms)
+Completed 200 OK in 267ms (Views: 258.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-15 20:38:38 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (1.9ms)
+  Rendered products/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 83ms (Views: 76.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:38:40 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered devise/shared/_stripe_checkout_button.html.erb (0.3ms)
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."product_id" = ? LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY "comments"."rating" DESC LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY "comments"."rating" DESC LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (0.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 1], ["LIMIT", 2], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_comments.html.erb (4.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 99ms (Views: 90.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-03-15 20:38:43 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.8ms)
+Completed 200 OK in 209ms (Views: 199.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-03-15 20:38:49 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cN/DNc0loOjAcAz8TZaRlv/xc93PhkRPrlAiEU4PRJ8UKG/5X5tkNYBw9TZbSFAq2fV0TC3ZfJ+NZcJr3tBk5A==", "user"=>{"email"=>"eisbrecherwelt@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "eisbrecherwelt@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-03-16 01:38:49.708780"], ["last_sign_in_at", "2018-03-11 22:18:47.110612"], ["sign_in_count", 18], ["updated_at", "2018-03-16 01:38:49.710527"], ["id", 1]]
+  [1m[35m (16.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 378ms (ActiveRecord: 21.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 20:38:49 -0500
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered simple_pages/landing_page.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-15 20:38:51 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (2.0ms)
+  Rendered products/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 88.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:38:52 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered devise/shared/_stripe_checkout_button.html.erb (0.3ms)
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."product_id" = ? LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY "comments"."rating" DESC LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY "comments"."rating" DESC LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (12.9ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 1], ["LIMIT", 2], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_comments.html.erb (4.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 116ms (Views: 106.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-15 20:39:45 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered devise/shared/_stripe_checkout_button.html.erb (0.4ms)
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."product_id" = ? LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY "comments"."rating" DESC LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY "comments"."rating" DESC LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.6ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 1], ["LIMIT", 2], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_comments.html.erb (4.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 99ms (Views: 91.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-15 20:41:49 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (2.1ms)
+  Rendered products/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 78.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2018-03-15 20:41:51 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered devise/shared/_stripe_checkout_button.html.erb (0.3ms)
+  [1m[36mComment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."product_id" = ? LIMIT ?[0m  [["product_id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.6ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 2], ["LIMIT", 2], ["OFFSET", 0]]
+  Rendered products/_comments.html.erb (1.5ms)
+  Rendered products/show.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 91ms (Views: 84.0ms | ActiveRecord: 1.4ms)
+
+
