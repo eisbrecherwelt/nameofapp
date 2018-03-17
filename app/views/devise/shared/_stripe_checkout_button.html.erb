@@ -7,5 +7,6 @@
     data-description="<%= @product.description %>"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
     data-locale="auto">
+    <%= hidden_field_tag(:product_id, "@product_id") %>
   </script>
 </form>
