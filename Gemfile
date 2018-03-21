@@ -88,3 +88,6 @@ gem 'stripe'
 
 # For Brakeman
 gem "brakeman"
+
+# For Dalli and Memcachier
+gem 'dalli'
