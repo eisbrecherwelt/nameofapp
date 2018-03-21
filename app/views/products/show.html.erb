@@ -10,13 +10,7 @@
   <%= @product.description %>
 </p>
 
-<p>
-  <%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image:(@product.image_url)) %>
-
-  <script>
-    $('#img-zoom').elevateZoom();
-  </script>
-</p>
+<%= image_tag(@product.image_url, data_zoom_image: @product.image_url, width: "350", class: "img-zoom") %>
 
 <p>
   <strong>Colour:</strong>
