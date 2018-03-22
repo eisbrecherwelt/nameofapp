@@ -26596,3 +26596,213 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 93ms (Views: 89.0ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-21 19:11:18 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered simple_pages/landing_page.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 1431ms (Views: 1397.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-21 19:11:21 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("products"."updated_at") FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (7.3ms)
+  Rendered products/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 110ms (Views: 105.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-21 19:11:22 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1219ms (ActiveRecord: 0.9ms)
+
+
+  
+IO::EINPROGRESSWaitWritable (Operation now in progress - connect(2) would block):
+  
+app/models/product.rb:27:in `viewed!'
+app/controllers/products_controller.rb:19:in `show'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-21 19:11:46 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1006ms (ActiveRecord: 0.2ms)
+
+
+  
+IO::EINPROGRESSWaitWritable (Operation now in progress - connect(2) would block):
+  
+app/models/product.rb:27:in `viewed!'
+app/controllers/products_controller.rb:19:in `show'
+Started POST "/__web_console/repl_sessions/5a82fd55555fd973ac9eecd2d6cbe1ac/trace" for 127.0.0.1 at 2018-03-21 19:12:07 -0500
+Started GET "/" for 127.0.0.1 at 2018-03-21 19:18:09 -0500
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered simple_pages/landing_page.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 105ms (Views: 96.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-21 19:18:11 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("products"."updated_at") FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (4.4ms)
+  Rendered products/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 96ms (Views: 91.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-21 19:18:13 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 21ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `viewed!' for #<Product:0x00007fedd828b450>):
+  
+app/controllers/products_controller.rb:19:in `show'
+Started GET "/products" for 127.0.0.1 at 2018-03-21 19:19:41 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("products"."updated_at") FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (4.5ms)
+  Rendered products/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 121ms (Views: 113.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-21 19:19:42 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 20ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `viewed!' for #<Product:0x00007fedec3846e0>):
+  
+app/controllers/products_controller.rb:19:in `show'
+Started POST "/__web_console/repl_sessions/23120bea7f86ee4c2ca2a59984c1f745/trace" for 127.0.0.1 at 2018-03-21 19:19:47 -0500
+Started GET "/products/1" for 127.0.0.1 at 2018-03-21 19:19:51 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `viewed!' for #<Product:0x00007fedd85ec518>):
+  
+app/controllers/products_controller.rb:19:in `show'
+Started GET "/" for 127.0.0.1 at 2018-03-21 19:25:24 -0500
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered simple_pages/landing_page.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 110ms (Views: 101.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-21 19:25:25 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("products"."updated_at") FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (4.4ms)
+  Rendered products/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 98ms (Views: 94.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-21 19:25:27 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (11.3ms)
+Completed 401 Unauthorized in 41ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `views' for #<Product:0x00007fedec283750>):
+    25: <h6>  
+    26:   Views:
+    27:   <span class="badge">
+    28:     <%= @product.views %>
+    29:   </span>
+    30: </h6> 
+    31: 
+  
+app/views/products/show.html.erb:28:in `_app_views_products_show_html_erb___3047375596825156062_70329922861380'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-21 19:25:54 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 27ms (ActiveRecord: 2.2ms)
+
+
+  
+NoMethodError (undefined method `viewed!' for nil:NilClass):
+  
+app/controllers/products_controller.rb:19:in `show'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-21 19:26:14 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 32ms (ActiveRecord: 2.4ms)
+
+
+  
+NoMethodError (undefined method `viewed!' for #<Product:0x00007feddc00f178>):
+  
+app/controllers/products_controller.rb:19:in `show'
+Started POST "/__web_console/repl_sessions/ee8e7789f48d7587bba4968aff58203d/trace" for 127.0.0.1 at 2018-03-21 19:28:28 -0500
+Started GET "/products/1" for 127.0.0.1 at 2018-03-21 19:29:41 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1027ms (ActiveRecord: 2.3ms)
+
+
+  
+IO::EINPROGRESSWaitWritable (Operation now in progress - connect(2) would block):
+  
+app/models/product.rb:31:in `viewed!'
+app/controllers/products_controller.rb:19:in `show'
+Started GET "/products" for 127.0.0.1 at 2018-03-21 19:29:48 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX("products"."updated_at") FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (4.4ms)
+  Rendered products/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 98ms (Views: 94.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-21 19:29:50 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1006ms (ActiveRecord: 0.3ms)
+
+
+  
+IO::EINPROGRESSWaitWritable (Operation now in progress - connect(2) would block):
+  
+app/models/product.rb:31:in `viewed!'
+app/controllers/products_controller.rb:19:in `show'
+Started POST "/__web_console/repl_sessions/e9ec3240609b4d97a1158feba724f21d/trace" for 127.0.0.1 at 2018-03-21 19:30:00 -0500
+Started POST "/__web_console/repl_sessions/e9ec3240609b4d97a1158feba724f21d/trace" for 127.0.0.1 at 2018-03-21 19:30:01 -0500
+Started POST "/__web_console/repl_sessions/e9ec3240609b4d97a1158feba724f21d/trace" for 127.0.0.1 at 2018-03-21 19:30:03 -0500
+Started POST "/__web_console/repl_sessions/e9ec3240609b4d97a1158feba724f21d/trace" for 127.0.0.1 at 2018-03-21 19:30:03 -0500
+Started POST "/__web_console/repl_sessions/e9ec3240609b4d97a1158feba724f21d/trace" for 127.0.0.1 at 2018-03-21 19:30:04 -0500
+Started POST "/__web_console/repl_sessions/e9ec3240609b4d97a1158feba724f21d/trace" for 127.0.0.1 at 2018-03-21 19:30:05 -0500
+Started POST "/__web_console/repl_sessions/e9ec3240609b4d97a1158feba724f21d/trace" for 127.0.0.1 at 2018-03-21 19:30:08 -0500
+Started POST "/__web_console/repl_sessions/e9ec3240609b4d97a1158feba724f21d/trace" for 127.0.0.1 at 2018-03-21 19:30:14 -0500
+Started POST "/__web_console/repl_sessions/e9ec3240609b4d97a1158feba724f21d/trace" for 127.0.0.1 at 2018-03-21 19:30:16 -0500
