@@ -27,7 +27,7 @@
   <span class="badge">
     <%= @product.views %>
   </span>
-</h6> 
+</h6>  
 
 <p>Average Rating: <div class="rated" id="#average-rating" data-score="<%= @product.average_rating %>"></div> </p>
 
@@ -46,5 +46,6 @@
 <%= link_to 'Back', products_path %>
 
 <%= render 'new_comment' %>
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 <%= render 'comments' %>
 <%= will_paginate @comments %>
