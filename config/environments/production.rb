@@ -100,4 +100,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Allows the ActionCable to function
+  config.web_socket_server_url = "wss://munichmunchies2demo.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://munichmunchies2demo.herokuapp.com', 'http://munichmunchies2demo.herokuapp.com']
 end
