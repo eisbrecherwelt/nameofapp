@@ -11,16 +11,15 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
     // Called when there's incoming data on the websocket for this channel
     $(".alert.alert-info").show();
     $('.product-reviews').prepend(data.comment);
-    $("#average-rating").attr('data-score', data.average_rating);
+    $('#average-rating').attr('data-score', data.average_rating);
     refreshRating();
   },
 
   listen_to_comments: function() {
-    return this.perform('listen', {});
+    return this.perform('listen', {
       product_id: $("[data-product-id]").data("product-id")
     });
   }
-
 });
 
 $(document).on('turbolinks:load', function() {
